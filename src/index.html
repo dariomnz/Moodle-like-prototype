@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Autores -->
+        <!-- Rubén Martín Jimenez -->
+        <!-- Dario Muñoz Muñoz -->
+        <!-- Mónica Ocaña Bastante -->
+        <!-- David Martin Lucha -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Scrips -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script/app.js"></script>
+        <script src="script/login.js"></script>
+        <!-- Plugin -->
+        <!-- Calendario -->
+        <script src="plugins/simple_calendar/jquery.simple-calendar.js"></script>
+        <link rel="stylesheet" type="text/css" href="plugins/simple_calendar/simple-calendar.css"/>
+        <!-- Para descargar el excel -->
+        <script src="plugins/export_table_excel/tableexport-xls-bold-headers.js"></script>
+        <!-- Graficos -->
+        <script src="plugins/chart/Chart.js"></script>
+        <link rel="stylesheet" type="text/css" href="plugins/chart/Chart.css"/>
+
+
+        <!-- Css -->
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" type="text/css" href="style/login.css">
+       
+        <title>Study</title>
+        <link rel="icon" href="images/icon_books.png">
+        <link rel="shortcut icon" href="images/icon_books.png">
+    </head>
+
+    <body>
+        <!-- Pagina home -->
+        <div id="home_screen">
+            <div class="no_footer">
+                <div class="row head">
+                      <!-- Cabecera-->
+                    <div class="slide_menu_btn">
+                        <img class="head_icon" src="images/icon_books.png" alt="background_icon">
+                        <h1 class="title_head">Study</h1>
+                    </div>
+                    <button class="btn" id="btn_go_login">Acceder</button>
+
+                </div>
+                <div class="row border_home">
+                      <!--Zona central, informacion de la pagina-->
+                    <table class="home_table">
+                        <tr>
+                            <td><p class="paragraph_home">
+                                Study la plataforma de aprendizaje más utilizada del mundo. <br><br>
+                                Empieza tu  formación online en minutos.<br><br>
+                                Gestión de asignaturas fácil e intuitiva.<br><br>
+                                Conseguirás todos los logros que te propongas.<br><br>
+                                Todo el material educativo a un click de ti.<br><br>
+                                Solo faltas tú, ¿a qué esperas?<br><br>
+                            </p></td>
+                              <!-- Logo de la pagina-->
+                            <td class="home_logo_td">
+                                <img class="home_logo" src="images/icon_books.png" alt="background_icon"></td>
+                        </tr>
+                    </table>
+                      <!--Linea de simbolos de universidades colaboradores-->
+                    <p class="colaborations_home">Colaboraciones</p>
+                    <table class="university_table">
+                        <tr>
+                            <!--Logo de universidad-->
+                            <td><img class="university_icon" src="images/viena_icon.png" alt="Logo Universidad de venecia"></td>
+                            <td><img class="university_icon" src="images/mit_icon.jpg" alt="Logo MIT"></td>
+                            <td><img class="university_icon" src="images/cambridge_icon.png" alt="Logo Universidad de Cambridge"></td>
+                            <td><img class="university_icon" src="images/bolonia_icon.png" alt="Logo Universidad de Murcia"></td>
+                            <td><img class="university_icon" src="images/oxford_icon.png" alt="Logo Universidad de Oxford"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+                <!-- Pie de pagina -->
+            <div class="footer col-12 col-s-12">
+                <table class="footer_table">
+                    <tr>
+                        <!--Enlaces a paginas de informacion-->
+                        <td><a href="https://www.uc3m.es/">Uc3m web</a></td>
+                        <td class="fake_click"> Copyright</td>
+                        <td class="fake_click"> Politica de Privacidad</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Pagina de inicio login -->
+        <div id="login_screen">
+            <!-- Logos de la pagina a cada lado -->
+            <img class="backgroud_icon backgroud_icon_left" src="images/icon_books.png" alt="background_icon">
+            <img class="backgroud_icon backgroud_icon_right" src="images/icon_books.png" alt="background_icon">
+            
+            <input type="submit" class="btn btn_red" id="btn_back_home" value="Volver">
+            <div class="login_container transparent animate_zoom_in">
+                <!-- Formulario de inicio -->
+                <div class="login_content form">
+                    <form name="login" onsubmit="return false">
+                        <h2 class="title">Identificación</h2>
+                            <!-- Contenedor para poner el correo-->
+                            <div class="gray_box input-div one">
+                              <div class="login_i">        
+                              </div>
+                              <div>
+                                      <!--Texto de fondo de la caja-->                                  
+                                      <h5>Correo electronico</h5>
+                                      <input type="email" class="input" id="login_email">
+                              </div>
+                           </div>
+                            <!-- Contenedor para la contraseña-->
+                           <div class="gray_box input-div pass">
+                              <div class="login_i">     
+                              </div>
+                              <div>
+                                  <!--Texto de fondo de la caja--> 
+                                   <h5>Contraseña</h5>
+                                   <input type="password" class="input" id="login_password">
+                           </div>
+                        </div>
+                        <!--Botones para el formulario--> 
+                        <input type="submit" class="btn" id="btn_login" value="Iniciar sesión">
+                        <input type="submit" class="btn" id="btn_register_page" value="Registrarse">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagina de registro -->
+        <div id="register_screen">
+            <div class="separator"></div>
+            <!--Formulario--> 
+            <div class="login_container col-10">
+                <div class="login_content">
+                    <form name="register" onsubmit="return false">
+                        <!--Imagen decorativa para el perfil--> 
+                        <img src="images/profile2.png" alt="img_profile">
+                        <h2 class="title">Registrate</h2>
+                       <!--Primera columna del formulario--> 
+                        <div class="col-4">
+                            <!--Caja para el nombre de usuario--> 
+                            <div class="gray_box input-div username">
+                                <div class="login_i">
+                                    
+                                </div>
+                                <div>
+                                        <h5>Nombre de usuario</h5>
+                                        <input type="text" class="input" id="register_name">
+                                        
+                             </div>
+                            </div>
+                            <!--Caja para el NIA--> 
+                            <div class="gray_box input-div nia">
+                                <div class="login_i">
+                                    
+                                </div>
+                                <div>
+                                        <h5>NIA</h5>
+                                        <input type="number" class="input" id="register_nia" >
+                             </div>
+                            </div>
+                            <!--Caja para la contraseña--> 
+                            <div class="gray_box input-div pass">
+                                <div class="login_i"> 
+                                     
+                                </div>
+                                <div>
+                                     <h5>Contraseña</h5>
+                                     <input type="password" class="input" id="register_password" >
+                                </div>
+                            </div>
+                            <!--Caja para nombres y apellidos reales--> 
+                            <div class="gray_box input-div name">
+                                <div class="login_i"> 
+                                     
+                                </div>
+                                <div>
+                                     <h5>Nombre y apellidos</h5>
+                                     <input type="text" class="input" id="register_name_surnames" >
+                                </div>
+                            </div>
+                        </div>
+                        <!--Segunda columna del formulario--> 
+                        <div class="col-4">
+                            <!--Caja para el correo--> 
+                            <div class="gray_box input-div email">
+                                <div class="login_i">
+                                        
+                                </div>
+                                <div>
+                                    <h5>Correo electronico</h5>
+                                    <input type="email" class="input" id="register_email" >
+                                </div>
+                             </div>
+                             <!--Caja para la fecha de nacimiento--> 
+                             <div class="gray_box input-div date focus_name">
+                              <div class="login_i">
+                                      
+                              </div>
+                              <div>
+                                      <h5>Fecha de nacimiento</h5>
+                                      <input type="date" class="input" id="register_bdate" >
+                              </div>
+                           </div>
+                           <!--Caja para el DNI--> 
+                           <div class="gray_box input-div id">
+                              <div class="login_i">
+                                      
+                              </div>
+                              <div>
+                                      <h5>DNI</h5>
+                                      <input type="text" class="input" id="register_dni" >
+                              </div>
+                           </div>
+                           
+                        </div>
+                        <!--Tercera columna del formulario--> 
+                        <div class="col-4">
+                            <!--Caja desplegable para el rol--> 
+                            <div class="gray_box input-div rol focus_name">
+                                <div class="login_i">
+                                        
+                                </div>
+                                <div>
+                                    <h5>Rol</h5>
+                                    <!--Opciones de desplegable--> 
+                                    <select class="input" id="register_rol" >
+                                        <option value="">-</option>
+                                        <option value="Estudiante">Estudiante</option>
+                                        <option value="Profesor">Profesor</option>
+                                        <option value="Administrador">Administrador</option>
+                                    </select>
+                                        
+                                </div>
+                             </div>
+                             <!--Caja desplegable para el grado--> 
+                            <div class="gray_box input-div grade focus_name hide">
+                                <div class="login_i">
+                                        
+                                </div>
+                                <div>
+                                        <h5>Grado</h5>
+                                        <!--Opciones de grado--> 
+                                        <select class="input" id="register_grade" >
+                                            <option value="">-</option>
+                                            <option value="Grado en Ingeniería Informática">Grado en Ingeniería Informática</option>
+                                            <option value="Grado en Derecho">Grado en Derecho</option>
+                                            <option value="Grado en Ingeniería Industrial">Grado en Ingeniería Industrial</option>
+                                        </select>
+                                </div>
+                             </div>
+                             <!--Caja para la universidad--> 
+                             <div class="gray_box input-div college focus">
+                                <div class="login_i">
+                                        
+                                </div>
+                                <div>
+                                        <h5>Universidad</h5>
+                                        <input type="text" class="input" id="register_university" value="UC3M" disabled>
+                                </div>
+                             </div>
+                             <!--Caja desplegable para el idioma--> 
+                             <div class="gray_box input-div language focus_name">
+                                <div class="login_i">
+                                        
+                                </div>
+                                <div>
+                                        <h5>Idioma</h5>
+                                        <!--Opciones del desplegable--> 
+                                        <select class="input" id="register_language">
+                                            <option value="">-</option>
+                                            <option value="Español">Español</option>
+                                            <option value="Ingles">Ingles</option>
+                                            <option value="Frances">Frances</option>
+                                        </select>
+                                </div>
+                             </div>
+                        </div>
+                            
+                            
+                           
+                         
+                        <div class="separator"></div>
+                        <!--Condiciones de uso que debe aceptar--> 
+                        <div class="input-div conditions">
+                            <div class="login_i round_checkbox">
+                                <input type="checkbox" class="input" id="register_conditions" >
+                                <label for="register_conditions"></label>
+                            </div>
+                            <div>
+                                <h5>He leído y acepto las Condiciones de uso</h5>
+                            </div>
+                         </div>
+                         <!--Botones del formulario--> 
+                        <input type="submit" class="btn" id="btn_register" value="Registrarse">
+                        <input type="button" class="btn btn_red" id="btn_errase_register" value="Borrar">
+                        <input type="button" class="btn btn_red" id="btn_back_register" value="Cancelar">
+                
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagina de cierre de sesion -->
+        <div id="logout_screen">
+            <!--Pop up desplegable--> 
+            <div class="login_container animate_zoom_in">
+                <div class="login_content form">
+                        <h1 class="title">¿Seguro que quieres <br> cerrar sesión?</h1>
+                        <!--Botones del mensaje--> 
+                        <input type="submit" class="btn btn_red" id="btn_confirn_logout" value="Cerrar sesión">
+                        <input type="submit" class="btn" id="btn_cancel_logout" value="Cancelar">
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagina principal -->
+        <div id="web_screen">
+            <div class="no_footer">
+                <!-- Cabecera -->
+                <div class="row head">
+                    <div class="col-4 col-s-6 border_container">
+                        <!-- <img class="menu_icon hide-col hide-col-s menu_icon_mov" id="menu_icon_mov" src="images/menu_icon.png" alt="Menu icon"> -->
+                        
+                        <div class="row">
+                            <!--Simbolo y nombre de la web--> 
+                            <div class="slide_menu_btn fake_click">
+                                <img class="head_icon" src="images/icon_books.png" alt="background_icon">
+                                <h1 class="title_head">▼Study</h1>
+                            </div>
+                        </div>
+                        <!--Menu desplegable del icono--> 
+                        <nav class="pop-menu hide-col hide-col-s vertical-menu" id="menu_mov">
+                            <!--Opciones en azul sin imagen--> 
+                            <a class="nav_subjects menu-title fake_click">Asignaturas<br></a>
+                            <!--Opcion con foto a la izquierda--> 
+                            <a class="nav_messages fake_click">
+                                <img alt="The messages icon" src="images/messages_icon.png">
+                                Mensajes<br></a>
+                            <a class="nav_grades fake_click">
+                                <img alt="The notes icon" src="images/notes_icon.png">
+                                Notas<br></a>
+                            <a class="pop_up_calendar fake_click">
+                                <img alt="The calendar icon" src="images/calendar_icon.png">
+                                Calendario<br></a>
+                            <a class="fake_click">
+                                <img alt="The user icon" src="images/user_icon.png">
+                                Perfil<br></a>
+                            <a class="btn_logout fake_click">
+                                <img alt="The exit icon" src="images/exit.png">
+                                Cerrar sesión<br></a>
+                        </nav>
+                        
+                    </div>
+                    <!--Barra de busqueda--> 
+                    <div class="col-3 hide-col-s hide-mov border_container">
+                        <div class="border_container">
+                            <input class="search_bar" type="text" placeholder="Buscar:">
+                        </div>
+                    </div>
+                    <div class="head_nav hide-mov col-5 col-s-6 border_container">
+                       <!--Imagenes con enlace de la derecha de la cabecera--> 
+                        <nav class="border_container horizontal-menu">
+                            <!--Nombre del usuario--> 
+                            <h3 class="display_contents head_menu hide-col-s white" id="user_name">User name</h3>
+                            <!--Imagen con enlace a otra parte de la web--> 
+                            <img class="head_menu_icon fake_click hover_image nav_messages" alt="The messages icon" src="images/messages_icon.png">
+                           <img class="head_menu_icon fake_click hover_image nav_grades" alt="The notes icon" src="images/notes_icon.png">
+                           <img class="head_menu_icon fake_click hover_image pop_up_calendar" alt="The calendar icon" src="images/calendar_icon.png">
+                           <img class="head_menu_icon fake_click hover_image" alt="The user icon" src="images/user_icon.png">
+                           <img class="head_menu_icon fake_click hover_image btn_logout" alt="The exit icon" src="images/exit.png">
+                        </nav>
+                    </div>
+                </div>
+                
+                    <!-- Columna central Asignaturas -->
+                    <div class="default-nav" id="nav_subjects">
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+
+                                <h1 class="">Asignaturas</h1>
+                                <!--Lista con las asignaturas--> 
+                                <table class="generic_table">   
+                                    <tbody>
+                                        <tr><td class="fake_click hover_image"><h2>Gr 82 - Interfaces de Usuario 20/21-1C</h2></td></tr>
+                                        <tr><td class="fake_click hover_image"><h2>Gr 82 - Redes de ordenadores 20/21-1C</h2></td></tr>
+                                        <!--Enlace funcional--> 
+                                        <tr><td class="nav_subject fake_click hover_image"><h2>Gr 82 - Arquitectura de computadores 20/21-1C</h2></td></tr>
+                                        <tr><td class="fake_click hover_image"><h2>Gr 82 - Ingenieria de software 20/21-1C</h2></td></tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Columna central Mensajes -->
+                    <div class="nav" id="nav_messages">
+                        
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                <h1>Mensajes</h1>
+                                <div class="message_div">
+                                    <!-- Menu desplegable de los distintos chats -->
+                                    <select>
+                                        <option value="">Todos los estudiantes</option>
+                                        <option value="">Grupo 1</option>
+                                        <option value="">Grupo 2</option>
+                                        <option value="">Grupo 3</option>
+                                        <option value="">Grupo 4</option>
+                                        <option value="">Grupo 5</option>
+                                        <option value="">ENRIQUE GALLEGOS ZAMORA</option>
+                                        <option value="">MARCOS BUZON HUERTAS</option>
+                                        <option value="">TOMAS DOMENECH ALONSO</option>
+                                    </select>
+                                 <!-- Tabla para mostrar los mensajes -->
+                                    <table id="message_table">
+                                         <!-- Mensaje a la izquierda -->
+                                        <tr class="text_left">
+                                            <td>
+                                                <div>
+                                                     <!-- Mensaje -->
+                                                    <p>Hola buenas, tendrias hoy un hueco para hacer la práctica 1?</p>
+                                                    <!-- Fecha del mensaje -->
+                                                    <p class="message_date">13:00 - 14/11/2020</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                         <!-- Mensaje 2 (a la derecha)-->
+                                        <tr class="text_right">
+                                            <td>
+                                                <div>
+                                                    <p>Claro, tengo todo el día libre, cuando te viene bien a ti?</p>
+                                                    <p class="message_date">16:00 - 14/11/2020</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                         <!-- Mensaje 3  (a la izquierda)-->
+                                        <tr  class="text_left">
+                                            <td>
+                                                <div>
+                                                    <p>17:00 por ejemplo?</p>
+                                                    <p class="message_date">19:00 - 14/11/2020</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                     <!-- Para escribir mensajes -->
+                                    <div class="message_input">
+                                         <!-- Caja de texto -->
+                                        <input type="text" placeholder="Introduce el mensaje.">
+                                         <!-- boton de enviar -->
+                                        <button class="btn" id="btn_message">Enviar</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Columna central entregas de los ejercicios -->
+                    <div class="nav" id="nav_uploader">
+                        
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                <!--Titulo asignatura con las fotos para acceder a grupos y mensajes--> 
+                                <h1 class="subject_title fake_click"> <span class="no_margin display_inline-block nav_subject">Gr 82 - Arquitectura de computadores 20/21-1C </span>
+                                    <img class="subject_menu_icon fake_click hover_image nav_forum" src="images/forum_icon.png" alt="forum_icon">
+                                    <img class="subject_menu_icon fake_click hover_image nav_groups" src="images/groups_icon.png" alt="Grupos">
+                                </h1>
+
+                                <h3><img class="subject_menu_icon fake_click hover_image for_profesor nav_uploader_edit" src="images/edit_icon.png" alt="edit_icon">
+                                    Entregador de primer bloque de ejercicio
+                                    </h3>
+                                    <hr>
+                                  <!-- Descripcion de la tarea -->
+                                <p>Para la resolución de este ejercicio deberéis seguir las instrucciones del archivo PDF adjunto, y subir la solución a Aula Global en un archivo .txt, .doc, o pdf antes de la fecha y hora límite de entrega.
+                                <br>
+                                El ejercicio se resolverá de forma individual. Su realización es voluntaria, pero todos aquellos que lo entreguéis podréis optar a 0,1 puntos extras a sumar a vuestra nota de teoría.
+                                </p>
+                                <!-- Tabla con los datos de la entrega, solo para el estudiante -->
+                                <div class="for_student">
+                                    <table class="generic_table">
+                                        <tr>
+                                            <td class="text_left">Fecha y hora límite de entrega:</td>
+                                            <td class="text_right">17:00 - 21/09/2020</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text_left">Estado de la entrega:</td>
+                                            <td class="text_right">No entregado</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text_left">Calificación:</td>
+                                            <td class="text_right">Sin calificar</td>
+                                        </tr>
+                                    </table>
+                                      <!-- Botones para la tabla -->
+                                    <table class="upload_buttons">
+                                        <tr>
+                                            <td><button class="btn">Añadir entrega</button></td>
+                                            <td><button class="btn">Pedir revisión</button></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                  <!-- Tabla con quien a entregado la tarea -->
+                                <div class="for_profesor">
+                                    <table class="generic_table">
+                                        <thead>
+                                            <tr>
+                                                <td class="text_center"><strong>Nombre</strong></td>
+                                                <td class="text_center"><strong>Calificación</strong></td>
+                                                <td class="text_center"><strong>Entrega</strong></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                              <!-- Alumno 1 -->
+                                            <tr>
+                                                <!-- Nombre -->
+                                                <td class="text_left">Rubén Martín Jiménez</td>
+                                                <!-- Valor de la entrega -->
+                                                <td><input class="upload_grade text_center" type="number" min=0 max=10 placeholder="-" value=8></td>
+                                                <!-- entrega subida-->
+                                                <td class="text_center fake_click text_link">
+                                                <img class="menu_icon" src="images/pdf_icon.png" alt="PDF" >
+                                                Ejercicio 1.pdf</td>
+                                            </tr>
+                                            <!-- Alumno 2 -->
+                                            <tr>
+                                                <td class="text_left">Alvaro Chapinal de Grado</td>
+                                                <td><input class="upload_grade text_center" type="number" min=0 max=10 placeholder="-"></td>
+                                                <!-- Entrega no subida -->
+                                                <td class="text_center">No entregado</td>
+                                            </tr>
+                                            <!-- Alumno 3 -->
+                                            <tr>
+                                                <td class="text_left">Darío Muñoz Muñoz</td>
+                                                <td><input class="upload_grade text_center" type="number" min=0 max=10 placeholder="-" value=9></td>
+                                                <td class="text_center fake_click text_link">
+                                                    <img class="menu_icon" src="images/pdf_icon.png" alt="PDF" >
+                                                    Bloque 1.pdf</td>
+                                            </tr>
+                                            <!-- Alumno 4 -->
+                                            <tr>
+                                                <td class="text_left">Cesar Martin-Pozuelo Rozas</td>
+                                                <td><input class="upload_grade text_center" type="number" min=0 max=10 placeholder="-"></td>
+                                                <td class="text_center">No entregado</td>
+                                            </tr>
+                                            <!-- Alumno 5 -->
+                                            <tr>
+                                                <td class="text_left">Javier Rodriguez Macias</td>
+                                                <td><input class="upload_grade text_center" type="number" min=0 max=10 placeholder="-"></td>
+                                                <td class="text_center">No entregado</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <!-- Columna central formulario actividades-->
+                     <div class="nav" id="nav_uploader_edit">
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                <!--Titulo asignatura--> 
+                                <h1 class="subject_title nav_subject fake_click">Gr 82 - Arquitectura de computadores 20/21-1C </h1>
+                                <!--Formulario, tabla con cajas de relleno de texto--> 
+                                <table class="form_subject_table">
+                                   <!--Titulo de la actividad--> 
+                                    <tr>
+                                        <td>
+                                            <p>Titulo: </p>
+                                        </td>
+                                        <td>
+                                            <!--Caja de relleno--> 
+                                            <textarea name="Título" cols="60" rows="3" placeholder="Introduzca el título.">Entregador de primer bloque de ejercicio</textarea>
+                                        </td>
+                                    </tr>
+                                   <!--Descripcion de la actividad--> 
+                                    <tr>
+                                        <td>
+                                            <p>Descipción: </p>
+                                        </td>
+                                        <td>
+                                            <!--Caja de relleno--> 
+                                            <textarea name="Descripción" cols="60" rows="3" placeholder="Introduzca la descripción.">Para la resolución de este ejercicio deberéis seguir las instrucciones del archivo PDF adjunto, y subir la solución a Aula Global en un archivo .txt, .doc, o pdf antes de la fecha y hora límite de entrega.
+El ejercicio se resolverá de forma individual. Su realización es voluntaria, pero todos aquellos que lo entreguéis podréis optar a 0,1 puntos extras a sumar a vuestra nota de teoría.
+                                                </textarea>
+                                        </td>
+                                    </tr>
+                                      <!--Archivo de enunciado--> 
+                                    <tr>
+                                        <td>
+                                            <p>Archivo: </p>
+                                        </td>
+                                        <td>
+                                              <!--Para subir el archivo al formulario--> 
+                                            <input type="file" name="file">
+                                        </td>
+                                    </tr>
+                                      <!--Fecha maxima para entregar la actividad--> 
+                                    <tr>
+                                        <td>
+                                            <p>Fecha limite: </p>
+                                        </td>
+                                        <td>
+                                            <input type="date" name="date" value="2020-09-21">
+                                        </td>
+                                    </tr>
+                                      <!--Desplegable para los grupos que sera visible la entrega--> 
+                                    <tr>
+                                        <td>
+                                            <p>Estudiantes asignados: </p>
+                                        </td>
+                                        <td>
+                                              <!--opciones del desplegable--> 
+                                            <select>
+                                                <option value="">Todos los estudiantes</option>
+                                                <option value="">Grupo 1</option>
+                                                <option value="">Grupo 2</option>
+                                                <option value="">Grupo 3</option>
+                                                <option value="">Grupo 4</option>
+                                                <option value="">Grupo 5</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                                  <!--Botones debajo del formulario--> 
+                                <table class="form_subject_buttoms">
+                                    <tr>
+                                        <td>
+                                            <button class="btn nav_uploader">Guardar</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn_red nav_uploader">Cancelar</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                                
+                                
+                        
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Columna central Arquitectura de computadores -->
+                    <div class="nav" id="nav_subject">
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                <!--Titulo asignatura con las fotos para acceder a grupos y mensajes--> 
+                                <h1 class="subject_title fake_click"> <span class="no_margin display_inline-block nav_subject">Gr 82 - Arquitectura de computadores 20/21-1C </span>
+                                    <img class="subject_menu_icon fake_click hover_image nav_forum" src="images/forum_icon.png" alt="forum_icon">
+                                    <img class="subject_menu_icon fake_click hover_image nav_groups" src="images/groups_icon.png" alt="Grupos">
+                                </h1>
+                                <!--Materiales del Tema 1--> 
+                                <div class="subject_topic">
+                                    <!--Titulo con icono para hacer cambios (solo profesor el icono)--> 
+                                    <h2>
+                                        <img class="subject_menu_icon fake_click hover_image for_profesor nav_form_subject" src="images/plus_icon.png" alt="add_icon">
+                                        Tema 1 - Introducción al Diseño de Computadores</h2>
+                                    <hr>
+                                    <!--Materiales--> 
+                                    <div class="subject_content">
+                                        <h3>Material</h3>
+                                        <!--Icono de visualizar (solo profesor)--> 
+                                        <img class="menu_icon subject_menu_icon fake_click hover_image for_profesor" src="images/show_icon.png" alt="show_icon">
+                                        <!--Icono de tarea--> 
+                                        <img class="menu_icon" src="images/pdf_icon.png" alt="PDF" >
+                                        <!--Nombre de la tarea--> 
+                                        <a class="fake_click">Introducción al Diseño de Computadores<br></a>
+
+                                        <img class="menu_icon subject_menu_icon fake_click hover_image for_profesor" src="images/show_icon.png" alt="show_icon">
+                                        <img class="menu_icon" src="images/video_icon.png" alt="PDF" >
+                                        <a href=#>Video: Introducción al Diseño de Computadores</a>
+                                        
+                                        <h3>Actividades</h3>
+                                        <img class="menu_icon subject_menu_icon fake_click hover_image for_profesor" src="images/show_icon.png" alt="show_icon">
+                                        <img class="menu_icon" src="images/book_icon.png" alt="PDF" >
+                                        <a class="fake_click">Lectura adicional<br></a>
+                                        <!--Tarea oculta para alumnos--> 
+                                        <img class="menu_icon subject_menu_icon fake_click hover_image for_profesor" src="images/hide_icon.png" alt="hide_icon">
+                                        <img class="menu_icon for_profesor" src="images/book_icon.png" alt="PDF" >
+                                        <a class="fake_click color_gray for_profesor">Lectura adicional 2</a>
+
+                                        <h3>Entregas</h3>
+                                        
+                                        <img class="menu_icon subject_menu_icon fake_click hover_image for_profesor" src="images/show_icon.png" alt="show_icon">
+                                        <img class="menu_icon" src="images/upload_icon.svg" alt="Upload" >
+                                        <a class="fake_click nav_uploader">Introducción al Diseño de Computadores<br></a>
+
+                                    </div>
+                                </div>
+                                <!--Tema 2--> 
+                                <div class="subject_topic">
+                                    <h2>
+                                        <img class="subject_menu_icon fake_click hover_image for_profesor nav_form_subject" src="images/plus_icon.png" alt="add_icon">
+                                        Tema 2 - Paralelismo a nivel de instrucción</h2>
+                                    <hr>
+                                    <!--Material--> 
+                                    <div class="subject_content">
+                                        <h3>Material</h3>
+                                        <img class="menu_icon subject_menu_icon fake_click hover_image for_profesor" src="images/show_icon.png" alt="show_icon">
+                                        <img class="menu_icon" src="images/pdf_icon.png" alt="PDF" >
+                                        <a class="fake_click">Predicción de salto y desenrollamiento de bucles</a>
+                                    </div>
+                                </div>
+                                <!--Tema 3--> 
+                                <div class="subject_topic">
+                                    <h2>
+                                        <img class="subject_menu_icon fake_click hover_image for_profesor nav_form_subject" src="images/plus_icon.png" alt="add_icon">
+                                        Tema 3 - Diseño de Computadores</h2>
+                                    <hr>
+                                    <!--Material--> 
+                                    <div class="subject_content">
+                                        <h3>Material</h3>
+                                        <img class="menu_icon subject_menu_icon fake_click hover_image for_profesor" src="images/show_icon.png" alt="show_icon">
+                                        <img class="menu_icon" src="images/pdf_icon.png" alt="PDF" >
+                                        <a class="fake_click">Diseño de Computadores<br></a>
+
+                                        <img class="menu_icon subject_menu_icon fake_click hover_image for_profesor" src="images/show_icon.png" alt="show_icon">
+                                        <img class="menu_icon" src="images/video_icon.png" alt="PDF" >
+                                        <a href=#>Video: Diseño de Computadores</a>
+
+                                        <h3>Actividades</h3>
+                                        <img class="menu_icon subject_menu_icon fake_click hover_image for_profesor" src="images/show_icon.png" alt="show_icon">
+                                        <img class="menu_icon" src="images/book_icon.png" alt="PDF" >
+                                        <a class="fake_click">Lectura adicional</a>
+                                    </div>
+                                </div>
+                                
+                        
+                            </div>
+                         </div>
+                    </div>
+
+                    <!-- Columna central formulario actividades-->
+                    <div class="nav" id="nav_form_subject">
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                <!--Titulo asignatura--> 
+                                <h1 class="subject_title nav_subject fake_click">Gr 82 - Arquitectura de computadores 20/21-1C </h1>
+                                <!--Formulario, tabla con cajas de relleno de texto--> 
+                                <table class="form_subject_table">
+                                   <!--Titulo de la actividad--> 
+                                    <tr>
+                                        <td>
+                                            <p>Titulo: </p>
+                                        </td>
+                                        <td>
+                                            <!--Caja de relleno--> 
+                                            <textarea name="Título" cols="60" rows="3" placeholder="Introduzca el título."></textarea>
+                                        </td>
+                                    </tr>
+                                   <!--Descripcion de la actividad--> 
+                                    <tr>
+                                        <td>
+                                            <p>Descipción: </p>
+                                        </td>
+                                        <td>
+                                            <!--Caja de relleno--> 
+                                            <textarea name="Descripción" cols="60" rows="3" placeholder="Introduzca la descripción."></textarea>
+                                        </td>
+                                    </tr>
+                                      <!--Archivo de enunciado--> 
+                                    <tr>
+                                        <td>
+                                            <p>Archivo: </p>
+                                        </td>
+                                        <td>
+                                              <!--Para subir el archivo al formulario--> 
+                                            <input type="file" name="file">
+                                        </td>
+                                    </tr>
+                                      <!--Fecha maxima para entregar la actividad--> 
+                                    <tr>
+                                        <td>
+                                            <p>Fecha limite: </p>
+                                        </td>
+                                        <td>
+                                            <input type="date" name="date">
+                                        </td>
+                                    </tr>
+                                      <!--Desplegable para los grupos que sera visible la entrega--> 
+                                    <tr>
+                                        <td>
+                                            <p>Estudiantes asignados: </p>
+                                        </td>
+                                        <td>
+                                              <!--opciones del desplegable--> 
+                                            <select>
+                                                <option value="">Todos los estudiantes</option>
+                                                <option value="">Grupo 1</option>
+                                                <option value="">Grupo 2</option>
+                                                <option value="">Grupo 3</option>
+                                                <option value="">Grupo 4</option>
+                                                <option value="">Grupo 5</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                                  <!--Botones debajo del formulario--> 
+                                <table class="form_subject_buttoms">
+                                    <tr>
+                                        <td>
+                                            <button class="btn nav_subject">Guardar</button>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn_red nav_subject">Cancelar</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                                
+                                
+                        
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                     <!-- Columna central grupos de Arquitectura de computadores -->
+                     <div class="nav" id="nav_groups">
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                <!--titulo permite volver con iconos grupos y mensajes--> 
+                                <h1 class="subject_title fake_click"> <span class="no_margin display_inline-block nav_subject">Gr 82 - Arquitectura de computadores 20/21-1C </span>
+                                    <img class="subject_menu_icon fake_click hover_image nav_forum" src="images/forum_icon.png" alt="forum_icon">
+                                    <img class="subject_menu_icon fake_click hover_image nav_groups" src="images/groups_icon.png" alt="Grupos">
+                                </h1>
+                                <!--Tabla con los grupos de trabajo--> 
+                                <table class="group_table">
+                                    <tr>
+                                       <!--Grupo 1--> 
+                                        <td>
+                                            <!--Caja con miembros del grupo y espacios disponibles--> 
+                                            <div class="group_container">
+                                                <h3>Grupo 1
+                                                    <img class="btn_group_del fake_click hover_image for_profesor" src="images/cross_icon.png" alt="equis para borrar">
+                                                </h3>
+                                                <p>1. Dario M.</p>
+                                                <p>2. ------</p>
+                                                <p>3. ------</p>
+                                                <p>4. ------</p>
+                                                <!--Boton unirse al grupo, solo estudiantes--> 
+                                                <button class="btn btn_group for_student">Unirse</button>
+                                            </div>
+                                        </td>
+                                       <!--Grupo 2--> 
+                                        <td>
+                                            <div class="group_container">
+                                                <h3>Grupo 2 
+                                                    <img class="btn_group_del fake_click hover_image for_profesor" src="images/cross_icon.png" alt="cross_icon"></h3>
+                                                <p>1. Ruben M.</p>
+                                                <p>2. Maria S.</p>
+                                                <p>3. ------</p>
+                                                <button class="btn btn_group for_student">Unirse</button>
+                                            </div>
+                                        </td>
+                                       <!--Grupo 3--> 
+                                        <td>
+                                            <div class="group_container">
+                                                <h3>Grupo 3 
+                                                    <img class="btn_group_del fake_click hover_image for_profesor" src="images/cross_icon.png" alt="equis para borrar">
+                                                </h3>
+                                                <p>1. Javier M.</p>
+                                                <p>2. ------</p>
+                                                <p>3. ------</p>
+                                                <p>4. ------</p>
+                                                <button class="btn btn_group for_student">Unirse</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                   <!--Segunda fila--> 
+                                    <tr>
+                                        <!--Grupo 4--> 
+                                        <td>
+                                            <div class="group_container">
+                                                <h3>Grupo 4 <img class="btn_group_del fake_click hover_image for_profesor" src="images/cross_icon.png" alt="equis para borrar"></h3>
+                                                <p>1. ------</p>
+                                                <p>2. ------</p>
+                                                <p>3. ------</p>
+                                                <button class="btn btn_group for_student">Unirse</button>
+                                            </div>
+                                        </td>
+                                        <!--Grupo 5--> 
+                                        <td>
+                                            <div class="group_container">
+                                                <h3>Grupo 5 
+                                                    <img class="btn_group_del fake_click hover_image for_profesor" src="images/cross_icon.png" alt="equis para borrar">
+                                                </h3>
+                                                <p>1. Lucas T.</p>
+                                                <p>2. ------</p>
+                                                <p>3. ------</p>
+                                                <p>4. ------</p>
+                                                <button class="btn btn_group for_student">Unirse</button>
+                                            </div>
+                                        </td>
+                                        <!--Solo profesor, boton agregar mas grupos--> 
+                                        <td>
+                                            <div class="btn_group_add for_profesor hover_image fake_click">
+                                                <p>+</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                
+                                
+                        
+                            </div>
+                         </div>
+                    </div>
+                    <!-- Columna central  Foros de la asignatura-->
+                    <div class="nav" id="nav_forum">
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                <!--Titulo asignatura enlace a material asignatura, iconos for y mensajes--> 
+                                <h1 class="subject_title fake_click"> <span class="no_margin display_inline-block nav_subject">Gr 82 - Arquitectura de computadores 20/21-1C </span>
+                                    <img class="subject_menu_icon fake_click hover_image nav_forum" src="images/forum_icon.png" alt="forum_icon">
+                                    <img class="subject_menu_icon fake_click hover_image nav_groups" src="images/groups_icon.png" alt="Grupos">
+                                </h1>
+                                <h1 class="center_title">Foro de la asignatura</h1>
+                                <!--Tabla con temas del foro--> 
+                                <table class="generic_table">
+                                    <thead>
+                                        <tr>
+                                            <th><strong>Titulo</strong></th>
+                                            <th>Mensajes</th>
+                                            <th>Ultimo mensaje</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <!--Tema del foro--> 
+                                            <td class="fake_click nav_forum_1">Memoria dinamica dentro de una funcion</td>
+                                            <!--Numero de mensajes--> 
+                                            <td>1</td>
+                                            <!--Fecha ultimo mensaje--> 
+                                            <td>14:00 &nbsp;&nbsp;&nbsp;&nbsp; 22/11/2020</td>
+                                        </tr>
+                                        <!--Tema 2--> 
+                                        <tr>
+                                            <td class="fake_click nav_forum_2">Practica OpenMP: Duda sobre funcion copia</td>
+                                            <td>3</td>
+                                            <td>20:40 &nbsp;&nbsp;&nbsp;&nbsp; 08/11/2020</td>
+                                        </tr>
+                                        <!--Tema 3--> 
+                                        <tr>
+                                            <td class="fake_click nav_forum_3">Ejercicios memoria caché</td>
+                                            <td>2</td>
+                                            <td>12:46 &nbsp;&nbsp;&nbsp;&nbsp; 11/11/2020</td>
+                                        </tr>
+                                        <!--Tema 4--> 
+                                        <tr>
+                                            <td class="fake_click nav_forum_4">Máquina Virtual</td>
+                                            <td>5</td>
+                                            <td>10:20 &nbsp;&nbsp;&nbsp;&nbsp; 18/10/2020</td>
+                                        </tr>
+                                        <!--Tema 5--> 
+                                        <tr>
+                                            <td class="fake_click nav_forum_5">Partición Linux</td>
+                                            <td>2</td>
+                                            <td>11:59 &nbsp;&nbsp;&nbsp;&nbsp; 17/10/2020</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Columna central foro1 -->
+                    <div class="nav" id="nav_forum_1">
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                 <!--Titulo asignatura enlace a material asignatura, iconos for y mensajes--> 
+                                <h1 class="subject_title fake_click"> <span class="no_margin display_inline-block nav_subject">Gr 82 - Arquitectura de computadores 20/21-1C </span>
+                                    <img class="subject_menu_icon fake_click hover_image nav_forum" src="images/forum_icon.png" alt="forum_icon">
+                                    <img class="subject_menu_icon fake_click hover_image nav_groups" src="images/groups_icon.png" alt="Grupos">
+                                </h1>
+                                <h1 class="center_title">Foro de la asignatura</h1>
+                                <!--Tema del foro--> 
+                                <h2>Memoria dinamica dentro de una funcion</h2>
+                               <!--Tabla con mensajes--> 
+                                <table class="generic_table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"><strong>Usuario</strong></th>
+                                            <th>Fecha</th>
+                                            <th>Mensaje</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <!--Foto usuario--> 
+                                            <td><img src="images/profile2.png" alt="icon_profile4" class="icon_student"></td>
+                                            <!--Nombre del usuario--> 
+                                            <td>MARTIN PEDROSA NOVAS</td>
+                                            <!--Fecha del mensaje--> 
+                                            <td>14:00 <br> 22/11/2020</td>
+                                            <!--Mensaje--> 
+                                            <td>Alguien sabe por que da error al ejecutar?</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--Botones--> 
+                                <h1 class="center">Añadir mensaje</h1>
+                                <textarea name="input_message_forum" class="input_message_forum" cols="30" rows="10" placeholder="Introduce el mensaje."></textarea>
+                                <button class="btn btn_send_message">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Columna central foro2 -->
+                    <div class="nav" id="nav_forum_2">
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                <!--Titulo asignatura enlace a material asignatura, iconos for y mensajes--> 
+                               <h1 class="subject_title fake_click"> <span class="no_margin display_inline-block nav_subject">Gr 82 - Arquitectura de computadores 20/21-1C </span>
+                                   <img class="subject_menu_icon fake_click hover_image nav_forum" src="images/forum_icon.png" alt="forum_icon">
+                                   <img class="subject_menu_icon fake_click hover_image nav_groups" src="images/groups_icon.png" alt="Grupos">
+                               </h1>
+                               <h1 class="center_title">Foro de la asignatura</h1>
+                                <!--Titulo--> 
+                                <h2>Practica OpenMP: Duda sobre funcion copia</h2>
+                                <table class="generic_table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"><strong>Usuario</strong></th>
+                                            <th>Fecha</th>
+                                            <th>Mensaje</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--Mensaje 1--> 
+                                        <tr>
+                                            <td><img src="images/profile1.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>MARTIN PEREZ CASTILLO</td>
+                                            <td>11:12 <br> 28/09/2020</td>
+                                            <td>Sabe alguien por que lanca un mensaje de error tras la segunda ejecucion?</td>
+                                        </tr>
+                                        <!--Mensaje 2--> 
+                                        <tr>
+                                            <td><img src="images/profile8.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>ANA LOPEZ SIOVAS</td>
+                                            <td>11:23 <br> 30/09/2020</td>
+                                            <td>Revisa que los parametros introducidos sean los correctos</td>
+                                        </tr>
+                                        <!--Mensaje 3--> 
+                                        <tr>
+                                            <td><img src="images/profile1.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>MARTIN PEREZ CASTILLO</td>
+                                            <td>20:40 <br> 08/11/2020</td>
+                                            <td>Gracias Ana.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--Botones--> 
+                                <h1 class="center">Añadir mensaje</h1>
+                                <textarea name="input_message_forum" class="input_message_forum" cols="30" rows="10" placeholder="Introduce el mensaje."></textarea>
+                                <button class="btn btn_send_message">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Columna central foro3 -->
+                    <div class="nav" id="nav_forum_3">
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                <!--Titulo asignatura enlace a material asignatura, iconos for y mensajes--> 
+                               <h1 class="subject_title fake_click"> <span class="no_margin display_inline-block nav_subject">Gr 82 - Arquitectura de computadores 20/21-1C </span>
+                                   <img class="subject_menu_icon fake_click hover_image nav_forum" src="images/forum_icon.png" alt="forum_icon">
+                                   <img class="subject_menu_icon fake_click hover_image nav_groups" src="images/groups_icon.png" alt="Grupos">
+                               </h1>
+                               <h1 class="center_title">Foro de la asignatura</h1>
+                                <!--Titulo del foro--> 
+                                <h2>Ejercicios memoria caché</h2>
+                                <table class="generic_table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"><strong>Usuario</strong></th>
+                                            <th>Fecha</th>
+                                            <th>Mensaje</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--Mensaje 1--> 
+                                        <tr>
+                                            <td><img src="images/profile9.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>CHICHO IBAÑEZ SERRADOR</td>
+                                            <td>12:43 <br> 11/11/2020</td>
+                                            <td>Este curso los ejercicios seran de menor dificultad debido a las circunstancias.</td>
+                                        </tr>
+                                        <!--Mensaje 2--> 
+                                        <tr>
+                                            <td><img src="images/profile9.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>CHICHO IBAÑEZ SERRADOR</td>
+                                            <td>12:46 <br> 11/11/2020</td>
+                                            <td>Cualquier duda que tengais sobre ellos contactad conmigo.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--Botones--> 
+                                <h1 class="center">Añadir mensaje</h1>
+                                <textarea name="input_message_forum" class="input_message_forum" cols="30" rows="10" placeholder="Introduce el mensaje."></textarea>
+                                <button class="btn btn_send_message">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Columna central foro4 -->
+                    <div class="nav" id="nav_forum_4">
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                <!--Titulo asignatura enlace a material asignatura, iconos for y mensajes--> 
+                               <h1 class="subject_title fake_click"> <span class="no_margin display_inline-block nav_subject">Gr 82 - Arquitectura de computadores 20/21-1C </span>
+                                   <img class="subject_menu_icon fake_click hover_image nav_forum" src="images/forum_icon.png" alt="forum_icon">
+                                   <img class="subject_menu_icon fake_click hover_image nav_groups" src="images/groups_icon.png" alt="Grupos">
+                               </h1>
+                               <h1 class="center_title">Foro de la asignatura</h1>
+                                <!--Titulo del foro--> 
+                                <h2>Máquina Virtual</h2>
+                                <table class="generic_table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"><strong>Usuario</strong></th>
+                                            <th>Fecha</th>
+                                            <th>Mensaje</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--Mensaje 1--> 
+                                        <tr>
+                                            <td><img src="images/profile9.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>CHICHO IBAÑEZ SERRADOR</td>
+                                            <td>8:30 <br> 18/10/2020</td>
+                                            <td>Chicos, os voy a poner un enlace para poder descargar VirtualBox</td>
+                                        </tr>
+                                        <!--Mensaje 2--> 
+                                        <tr>
+                                            <td><img src="images/profile9.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>CHICHO IBAÑEZ SERRADOR</td>
+                                            <td>13:20 <br> 18/10/2020</td>
+                                            <td>Esta subido en la magistral.</td>
+                                        </tr>
+                                        <!--Mensaje 3--> 
+                                        <tr>
+                                            <td><img src="images/profile9.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>CHICHO IBAÑEZ SERRADOR</td>
+                                            <td>14:30 <br> 18/10/2020</td>
+                                            <td>Os adjunto tambien un manual de uso con linstruccioes detalladas.</td>
+                                        </tr>
+                                        <!--Mensaje 4--> 
+                                        <tr>
+                                            <td><img src="images/profile9.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>MARTIN PEREZ CASTILLO</td>
+                                            <td>14:40 <br> 18/10/2020</td>
+                                            <td>A mi no me sale</td>
+                                        </tr>
+                                        <!--Mensaje 5--> 
+                                        <tr>
+                                            <td><img src="images/profile9.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>CHICHO IBAÑEZ SERRADOR</td>
+                                            <td>14:58 <br> 18/10/2020</td>
+                                            <td>¿Estas mirando en magistral?</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--Botones--> 
+                                <h1 class="center">Añadir mensaje</h1>
+                                <textarea name="input_message_forum" class="input_message_forum" cols="30" rows="10" placeholder="Introduce el mensaje."></textarea>
+                                <button class="btn btn_send_message">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Columna central foro5 -->
+                    <div class="nav" id="nav_forum_5">
+                        <div class="col-12 col-s-12 border_container">
+                            <div class="border">
+                                <!--Titulo asignatura enlace a material asignatura, iconos for y mensajes--> 
+                               <h1 class="subject_title fake_click"> <span class="no_margin display_inline-block nav_subject">Gr 82 - Arquitectura de computadores 20/21-1C </span>
+                                   <img class="subject_menu_icon fake_click hover_image nav_forum" src="images/forum_icon.png" alt="forum_icon">
+                                   <img class="subject_menu_icon fake_click hover_image nav_groups" src="images/groups_icon.png" alt="Grupos">
+                               </h1>
+                               <h1 class="center_title">Foro de la asignatura</h1>
+                                <!--Titulo del foro--> 
+                                <h2>Partición Linux</h2>
+                                <table class="generic_table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"><strong>Usuario</strong></th>
+                                            <th>Fecha</th>
+                                            <th>Mensaje</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--Mensaje 1--> 
+                                        <tr>
+                                            <td><img src="images/profile2.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>MARTIN PEDROSA NOVAS</td>
+                                            <td>11:12 <br> 17/10/2020</td>
+                                            <td>Chicos, sabeis hacer una particion?</td>
+                                        </tr>
+                                        <!--Mensaje 2--> 
+                                        <tr>
+                                            <td><img src="images/profile9.png" alt="icon_profile4" class="icon_student"></td>
+                                            <td>CHICHO IBAÑEZ SERRADOR</td>
+                                            <td>11:59 <br> 17/10/2020</td>
+                                            <td>Si, es muy facil.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--Botones--> 
+                                <h1 class="center">Añadir mensaje</h1>
+                                <textarea name="input_message_forum" class="input_message_forum" cols="30" rows="10" placeholder="Introduce el mensaje."></textarea>
+                                <button class="btn btn_send_message">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna central Notas -->
+                    <div class="nav" id="nav_grades">
+                        <div class="col-12 col-s-12 border_container">
+                            <!--Menu desplegable desde el titulo de la asignatura--> 
+                            <div class="border">
+                                <!--Opciones--> 
+                                <select class="select_grades">
+                                    <option value="">Gr 82 - Arquitectura de computadores 20/21-1C</option>
+                                    <option value="">Gr 82 - Redes de ordenadores 20/21-1C</option>
+                                    <option value="">Gr 82 - Ingenieria de software 20/21-1C</option>
+                                    <option value="">Gr 82 - Interfaces de Usuario 20/21-1C</option>
+                                </select>
+                                <!--Grafica con las notas--> 
+                                <div class="grafic_container">
+                                    <canvas class="for_student" id="grades_grafic_student"></canvas>
+                                    <canvas class="for_profesor" id="grades_grafic_profesor"></canvas>
+                                </div>
+                                <!--Tabla con las notas que se puede descargar el profesor. No visible--> 
+                                <table class="generic_table almost_hide">
+                                    <thead>
+                                        <tr>
+                                            <th>Estudiante</th>
+                                            <th>Nota final</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <!--Nombre alumno--> 
+                                            <td>ENRIQUE GALLEGOS ZAMORA</td>
+                                            <!--Nota--> 
+                                            <td>90</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MARCOS BUZON HUERTAS</td>
+                                            <td>77</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TOMAS DOMENECH ALONSO</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MARTIN PEDROSA NOVAS</td>
+                                            <td>93</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FRANCISCO CASAS CASES</td>
+                                            <td>81</td>
+                                        </tr>
+                                        <tr>
+                                            <td>AGUSTIN ARRIETA GAZQUEZ</td>
+                                            <td>30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>MARIA CRISTINA MILLAN RUANO</td>
+                                            <td>20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ROSA MARIA VILLEGAS DEL CERRO</td>
+                                            <td>80</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GLORIA LUCENA COELLO</td>
+                                            <td>70</td>
+                                        </tr>
+                                        <tr>
+                                            <td>RICARDO FERRO BERNARDO</td>
+                                            <td>90</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                 <!--Tabla con las notas que se puede descargar el alumno. No visible--> 
+                                <table class="generic_table almost_hide">
+                                    <thead>
+                                        <tr>
+                                            <th>Examen 1</th>
+                                            <th>Quiz 1</th>
+                                            <th>Examen 2</th>
+                                            <th>Ejercicios</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>80</td>
+                                            <td>60</td>
+                                            <td>77</td>
+                                            <td>58</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button class="btn btn_download">Descargar</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- Pie de pagina -->
+            <div class="footer col-12 col-s-12">
+                 <!--Enlaces con informacion--> 
+                <table class="footer_table">
+                    <tr>
+                        <td><a href="https://www.uc3m.es/">Uc3m web</a></td>
+                        <td class="fake_click"> Copyright</td>
+                        <td class="fake_click"> Politica de Privacidad</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Calendario -->
+            <div id="calendar_screen">
+                <div id="calendar_container">
+                <div>
+                    <button class="pop_up_calendar" id="calendar_close">Cerrar</button>
+                     <!--Menu desplegable en el calendario para cambiar al de otra asignatura--> 
+                    <select class="select_calendar">
+                        <option value="">Gr 82 - Arquitectura de computadores 20/21-1C</option>
+                        <option value="">Gr 82 - Redes de ordenadores 20/21-1C</option>
+                        <option value="">Gr 82 - Ingenieria de software 20/21-1C</option>
+                        <option value="">Gr 82 - Interfaces de Usuario 20/21-1C</option>
+                    </select>
+                </div>
+                <div id="calendar"></div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

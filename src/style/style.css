@@ -1,0 +1,748 @@
+/* Constantes con los colores*/
+:root{
+    --black:black;
+    --gray:gray;
+    --white:white;
+    --light-gray:lightgray;
+    --light-light-gray : rgb(231, 231, 231) ;
+    --light-blue:rgb(181, 206, 255);
+    --light-light-blue:rgb(200, 219, 255);
+    --blue:rgb(0, 153, 255);
+    --dark-blue:rgb(0, 114, 190);
+    --blue-link:rgb(0,0,255);
+    /* Especificos del calendario*/
+    --calendar-light-blue: rgb(181, 206, 255);
+    --calendar-light-light-blue: rgb(200, 219, 255);
+
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Para la pagina home */
+#home_screen{
+    display: none;
+}
+/* Cabecera*/
+.head{
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: var(--blue);
+}
+
+/* Iconos cabecera*/
+.head_icon{
+    height: 50px;
+    width: auto;
+    margin: 10px;
+    vertical-align: middle;
+}
+/* Barra de busqueda*/
+.search_bar{
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    border-radius: 10px;
+    background-color: var(--light-gray);
+    border-color: transparent;
+}
+/* Titulo de la cabecera*/
+.title_head{
+    color: var(--white);
+    display: inline;
+    vertical-align: middle;
+}
+/* Imagenes en linea en la parte superior*/
+.slide_menu_btn{
+    display: inline-block;
+}
+/*Boton de acceso desde home*/
+#btn_go_login{
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    width: 20%;
+    border-radius: 10px;
+    height: 50px;
+
+	background-image: linear-gradient(to right, rgb(0, 80, 227), rgb(31, 110, 255), rgb(0, 89, 255));
+}
+/*Texto pagina home*/
+.paragraph_home{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+/*Tablas para organizar la pagina de home*/
+.home_table{
+    width: 100%;
+    text-align: left;
+}
+/*Logo de home en el parrafo*/
+.home_logo{
+    width: 100%;
+    height: auto;
+}
+/*Logo de home en la cabecra*/
+.home_logo_td{
+    width: 30%;
+}
+/*Espacio para iconos de las universidades*/
+.colaborations_home{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+/*Espacio para el parrafo*/
+.border_home{
+    padding: 50px 10%;
+}
+/*Tabla para iconos de universidades*/
+.university_table{
+    width: 100%;
+    text-align: center;
+}
+/*Iconos de las universidades*/
+.university_icon{
+    width: auto;
+    height: 8vw;
+    padding: 0.5vw;
+}
+/*Opacidad del hover*/
+.hover_image:hover{
+    opacity: 0.4;
+}
+/*Constante del color blanco*/
+.white{
+    color: white;
+}
+/*Estilos de la pagina de asigntaruas*/
+/*Iconos de las paginas de las asignatura*/
+.subject_menu_icon{
+    vertical-align: middle;
+    height: 45px;
+    width: 45px;
+
+    background-color: var(--light-gray);
+    border-radius: 50px;
+}
+/*Titulos asignaturas*/
+.subject_title{
+    margin-bottom: 50px;
+}
+/*Titulos asigntaruas*/
+.subject_topic{
+    margin-left: 3%;
+}
+/*Para mantener alineados a la izquierda el material*/
+.subject_content{
+    margin-left: 5%;
+}
+/*Para alinear el titulo*/
+.center_title{
+    text-align: center;
+}
+/*Constante de color gris*/
+.color_gray{
+    color: var(--gray);
+}
+
+/*Para los grados*/
+/*Caja del seleccionador*/
+.grafic_container{
+    margin: 0 15%;
+    width: 70%;
+    height: auto;
+}
+/*Grados*/
+.select_grades{
+    margin: 20px 5%;
+    width: 90%;
+    text-align: center;
+    font-size: 3.5vw;
+    border-radius: 20px;
+}
+/*Para ocultar*/
+.almost_hide{
+    opacity: 0;
+    top: 0;
+    position: absolute;
+    z-index: -10;
+    max-width: 10px;
+    max-height: 10px;
+}
+
+/* Para los grupos */
+
+/*Tabla para los grupos*/
+.group_table{
+    width: 100%;
+}
+/*Contenedor del grupo*/
+.group_container{
+    background-color: var(--light-gray);
+    margin: 10%;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 0.4rem;
+    overflow: auto;
+}
+/*Boton*/
+.btn.btn_group{
+    width: 60%;
+    height: 2rem;
+    margin: 0 0 1rem 0;
+}
+/*Boton para sumarse al grupo*/
+.btn_group_add{
+    text-align: center;
+    background-color: var(--light-gray);
+    margin-left: 30%;
+    width: 40%;
+    height: 40%;
+    border: 20px solid var(--light-gray);
+    border-radius: 100px;
+}
+/*Boton agregar grupo*/
+.btn_group_add p{
+    font-size: 3rem;
+    margin: 0;
+    color: var(--blue);
+}
+/*Boton editar el grupo*/
+.btn_group_del{
+    height: 1rem;
+    width: 1rem;
+}
+
+
+
+/* Para formularios en asignaturas */
+/* Nombre del usuario */
+.form_subject_table{
+    width: 100%;
+}
+.form_subject_table tr{
+    background-color: var(--light-gray);
+    border-radius: 20px;
+    border: 20px solid;
+}
+.form_subject_table td{
+    background-color: var(--light-gray);
+    border-radius: 20px;
+    border: 10px solid var(--light-gray);
+}
+/* Cajas de texto */
+.form_subject_table textarea{
+    width: 100%;
+}
+/* Tabla para el formulario */
+.form_subject_table select{
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1rem;
+}
+/* Botones del formulario*/
+.form_subject_buttoms{
+    width: 100%;
+    text-align: center;
+}
+.form_subject_buttoms button{
+    width: 70%;
+    font-size: 1rem;
+}
+
+
+
+/* Para la pantalla del calendario*/
+.select_calendar{
+    margin: 20px 5%;
+    width: 90%;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 20px;
+}
+
+/* Para la pantalla de upload */
+.upload_buttons{
+    width: 100%;
+    text-align: center;
+}
+.upload_buttons button{
+    width: 70%;
+    height: 2.5rem;
+}
+.upload_grade{
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    border-color: transparent;
+}
+.text_link{
+    color: var(--blue-link);
+}
+/* Para la pantalla de mensajes */
+/* Para los grupos */
+.message_div{
+    background-color: var(--light-light-gray);
+    border-radius: 20px;
+}
+.message_div select{
+    margin: 20px 5%;
+    width: 90%;
+    text-align: center;
+    font-size: 3.5vw;
+    border-radius: 20px;
+    background-color: var(--light-gray);
+    border-color: transparent;
+}
+.message_div table{
+    width: 100%;
+    padding: 20px 5%;
+}
+/* Poner mensajes a la izquierda*/
+.text_left{
+    text-align: left;
+}
+.text_center{
+    text-align: center;
+}
+/* Poner mensajes a la derecha*/
+.text_right{
+    text-align: right;
+}
+/* Datos de los mensajes*/
+.message_date{
+    text-align: right;
+    color: var(--gray);
+    font-size: 0.7em;
+    margin: 0.5em;
+}
+
+.message_div table div{
+    background-color: var(--white);
+    display: inline-block;
+    border-radius: 15px;
+    padding: 0 10px;
+}
+
+.message_div .message_input{
+    background-color: var(--light-gray);
+    margin: 0 5%;
+    border-radius: 20px;
+}
+
+.message_input input{
+    margin-left: 5%;
+    width: 60%;
+    height: 2rem;
+    border-radius: 10px;
+}
+.message_input button{
+    margin: 10px;
+    width: 30%;
+    height: 2rem;
+}
+
+#web_screen{
+    display: none;
+}
+/* Borde de los contenedores*/
+.border_container{
+    padding: 10px;
+}
+/* Borde*/
+.border{
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+}
+/* Borde de los titulos*/
+.border_title{
+    background-color: var(--light-blue);
+    margin-top: 0px;
+}
+/* Menu vertical*/
+.vertical-menu a{
+    color: var(--black);
+    text-decoration: none;
+    border: 1px solid var(--light-gray);
+    background-color: var(--white);
+    display: block;
+    padding: 10px;
+}
+/* Menu vertical al hacer hover*/
+.vertical-menu a:hover{
+    background-color: var(--light-gray);
+}
+/* Titulo del menu*/
+.vertical-menu a.menu-title{
+    color: var(--white);
+    font-size: 1.5em;
+    background-color: var(--blue);
+}
+
+.vertical-menu a.menu-title:hover{
+    background-color: var(--dark-blue);
+}
+/* Imagenes del menu*/
+.vertical-menu img{
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+}
+/* Menu horizontal*/
+.horizontal-menu{
+    text-align: right;
+}
+/* Enlaces del menu*/
+.horizontal-menu a{
+    color: var(--black);
+    text-decoration: none;
+    border: 1px solid var(--light-gray);
+    background-color: var(--white);
+    padding: 10px;
+}
+/* Menu horizontal al hacer hover sobre los enlaces*/
+.horizontal-menu a:hover{
+    background-color: var(--light-gray);
+}
+/*Titulo del menu horizontal*/
+.horizontal-menu a.menu-title{
+    color: var(--white);
+    font-size: 1.5em;
+    background-color: var(--blue);
+}
+/* Cuerpo*/
+body{
+    margin: 0px;
+}
+/* Filas*/
+.row::after {
+content: "";
+clear: both;
+display: table;
+}
+/* Separador para tablas*/
+.separator{
+    clear: both;
+    display: table;
+    height: 2rem;
+}
+/* Clase columna para adaptar tamaño*/
+[class*="col-"] {
+    float: left;
+  }
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Para que algo se quede a la derecha*/
+.right{
+    float: right;
+}
+.display_flow-root{
+    display: flow-root;
+}
+/* Para poner en linea*/
+.display_inline{
+    display: inline;
+}
+/* Para poner en linea juntos*/
+.display_inline-block{
+    display: inline-block;
+}
+/* Para que se vea*/
+.display_contents{
+    display: contents;
+}
+/* Para quitar el margen*/
+.no_margin{
+    margin: 0;
+}
+/* Constante para tener el borde verde*/
+.green_border{
+    border: 3px solid green;
+}
+/* Logo de la web*/
+.logo{
+    width: 100px;
+    vertical-align: middle;
+}
+/* Cabecera del nav*/
+.head_nav{
+    text-align: center;
+    margin: 0px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+}
+
+.event_list{
+    list-style: none;
+}
+
+.logo_topic{
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+/*Foto del estudiante*/
+.icon_student{
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+/*Enlace que se resalta*/
+.fake_click{
+    cursor: pointer;
+}
+/*Tabla del pie para organizar enlaces*/
+.footer_table{
+    border-spacing: 0px;
+    width: 100%;
+    text-align: center;
+}
+/*Estilo de tabla*/
+.generic_table{
+    border-spacing: 0px;
+    width: 100%;
+    text-align: center;
+
+    overflow: hidden;
+    border-radius: 15px;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.generic_table thead tr {
+    background-color: var(--light-gray);
+    text-align: left;
+}
+
+.generic_table thead th:nth-of-type(even) {
+    background-color: var(--light-light-gray);
+}
+
+.generic_table th,
+.generic_table td {
+    padding: 0.3rem 0.2rem;
+}
+
+.generic_table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.generic_table tbody tr:nth-of-type(even) {
+    background-color: var(--light-light-gray);
+}
+
+.generic_table tbody tr td:last-child {
+    word-break: break-word;
+}
+
+/*Para no tener pie*/
+.no_footer{
+    min-height: 97vh;
+}
+/*Pie de pagina*/
+.footer{
+    box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 3vh;
+}
+
+.footer td{
+    width: 33%;
+    border-left: 2px solid var(--light-gray);
+    border-right: 2px solid var(--light-gray);
+}
+/*Alinear texto en el centro*/
+.center{
+    text-align: center;
+}
+/*Mensajes puestos en el foro*/
+.input_message_forum{
+    resize: none;
+    width: 100%;
+}
+
+
+/*Movimiento del menu*/
+#mov-menu ~ nav{
+    max-height: 0px;
+}
+
+#mov-menu:checked ~ nav{
+    max-height: 350px;
+}
+/*Pop up*/
+.pop-menu{
+    top: 60px;
+    background-color: var(--white);
+    position: absolute;
+    overflow: hidden;
+    -webkit-transition: max-height 0.3s;
+    -moz-transition: max-height 0.3s;
+    -ms-transition: max-height 0.3s;
+    -o-transition: max-height 0.3s;
+    transition: max-height 0.3s;
+}
+
+/*Calendario*/
+#calendar_screen{
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    top:0px;
+    left:0px;
+    display: none;
+    background-color: rgba(0,0,0, 0.4);
+}
+
+/*Contenedor del calendario*/
+#calendar_container{
+    border-radius: 20px;
+    /* background-color: #91caff; */
+    background-color: var(--white);
+    width: 30rem;
+    height: 36rem;
+}
+/*Cerrar el calendario*/
+#calendar_close{
+    background-color: var(--calendar-light-blue);
+    border-radius: 20px;
+    border: 0px;
+    border-style: none;
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+    outline: 0px;
+}
+
+#calendar_close:hover{
+    background-color: var(--calendar-light-light-blue);
+}
+/*Movimiento del pop up*/
+.animate_zoom_in {
+    -webkit-animation: animateZoomIn 0.6s;
+    animation: animateZoomIn 0.6s
+  }
+  /*Animaciones de la pagina*/
+@-webkit-keyframes animateZoomIn {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animateZoomIn {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+.animate_zoom_out {
+    -webkit-animation: animateZoomOut 0.6s;
+    animation: animateZoomOut 0.6s
+  }
+  
+@-webkit-keyframes animateZoomOut {
+    from {-webkit-transform: scale(1)} 
+    to {-webkit-transform: scale(0)}
+}
+  
+@keyframes animateZoomOut {
+    from {transform: scale(1)} 
+    to {transform: scale(0)}
+}
+
+/* Para la columna central */
+.nav {display:none}
+
+.default-nav {display:block}
+
+.head_title{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+.hide{
+    display: none;
+}
+
+/* Para telefonos */
+[class*="col-"] {
+    width: 100%;
+}
+.hide-mov {display: none;}
+
+
+.label-menu{display: contents;}  
+.logo{display: none;}
+  
+@media only screen and (min-width: 600px) {
+    /* Para tabletas: */
+    .logo{display: inline;}
+    .hide-mov {display: block;}
+    .hide-col-s {display: none;}
+    .display_contents.hide-col-s {display: none;}
+    .head_title{font-size: 2vw;}
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* Para ordenador */
+    .logo{display: inline;}
+    .hide-col-s {display: block;}
+    .display_contents.hide-col-s {display: contents;}
+    .hide-col {display: none;}
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/*Icono de opciones del menu*/
+.menu_icon{
+    vertical-align: middle;
+    height: 30px;
+    width: 30px;
+}
+/*Icono del que sale el menu*/
+.head_menu_icon{
+    vertical-align: middle;
+    height: 40px;
+    width: 40px;
+}
+/*Menu pop up*/
+.pop-menu{
+    width: auto;
+}
+
+.one_third{
+    width: 33%;
+}
+/*Menu de la cabecera*/
+.head_menu{
+    font-size: 1.7vw;
+}
